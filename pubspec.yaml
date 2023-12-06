@@ -40,6 +40,8 @@ dependencies:
   # app info
   package_info_plus: ^4.0.2
   collection: ^1.17.1
+  firebase_core: ^2.24.0
+  firebase_auth: ^4.15.0
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +74,7 @@ flutter:
     - assets/logos/
     - assets/intro/
     - assets/images/
+    - assets/images/login.png
 
   fonts:
     - family: Poppins

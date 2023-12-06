@@ -1,9 +1,15 @@
+import 'package:al_quran/firebase_options.dart';
+import 'package:al_quran/screens/profile/share_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
+
+import 'firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:al_quran/app_routes.dart';
 import 'package:al_quran/cubits/bookmarks/cubit.dart';
@@ -37,6 +43,12 @@ Future<void> main() async {
 
   await Hive.openBox('app');
   await Hive.openBox('data');
+
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
 
   runApp(const MyApp());
 }
@@ -100,7 +112,7 @@ class MaterialChild extends StatelessWidget {
         AppRoutes.juz: (context) => const JuzIndexScreen(),
         AppRoutes.splash: (context) => const SplashScreen(),
         AppRoutes.surah: (context) => const SurahIndexScreen(),
-        AppRoutes.shareApp: (context) => const ShareAppScreen(),
+        AppRoutes.shareApp: (context) => const ProfileAppScreen(),
         AppRoutes.bookmarks: (context) => const BookmarksScreen(),
         AppRoutes.onboarding: (context) => const OnboardingScreen(),
         AppRoutes.home: (context) =>

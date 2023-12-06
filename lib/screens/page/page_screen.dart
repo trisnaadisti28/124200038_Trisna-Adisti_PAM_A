@@ -116,7 +116,7 @@ class _PageScreenState extends State<PageScreen> {
                           verse!.text!,
                           textAlign: TextAlign.right,
                           style: TextStyle(
-                            fontFamily: 'Noor',
+                            fontFamily: 'Poppins',
                             fontSize: height * 0.0275,
                           ),
                         ),

@@ -223,7 +223,7 @@ class _JuzIndexScreenState extends State<JuzIndexScreen> {
               imagePath: StaticAssets.quranRail,
             ),
             const CustomTitle(
-              title: "Juzz Index",
+              title: "Juz",
             ),
             if (appProvider.isDark) ...[
               Flare(

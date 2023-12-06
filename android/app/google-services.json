@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "484563447384",
+    "project_id": "project-akhir-74302",
+    "storage_bucket": "project-akhir-74302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484563447384:android:2af3cfb12b2aa91183642d",
+        "android_client_info": {
+          "package_name": "com.example.project_akhir_disti"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkp0cVUmguxXs7B3xuXKk8V5x6c_dJ51M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:484563447384:android:a0ebe3339935ec7983642d",
+        "android_client_info": {
+          "package_name": "com.hmz.al_quran"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkp0cVUmguxXs7B3xuXKk8V5x6c_dJ51M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

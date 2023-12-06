@@ -2,12 +2,18 @@ import 'package:al_quran/app_routes.dart';
 import 'package:al_quran/configs/app.dart';
 import 'package:al_quran/configs/configs.dart';
 import 'package:al_quran/providers/onboarding_provider.dart';
+import 'package:al_quran/screens/login/login.dart';
 import 'package:al_quran/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+
 part 'widgets/indicator.dart';
 part 'widgets/onboarding_page.dart';
+
+
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -33,7 +39,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     const _OnBoardingPage(
       image: StaticAssets.easyNav,
       text:
-          "Now with Surah & Juz Index you can find your required Surahs & Juzs easily.\n\nWith Bookmark option you can access your daily readings.\n",
+          "Now with Surah & Juz you can find your required Surahs & Juz easily.\n\nWith Bookmark option you can access your daily readings.\n",
     ),
     const _OnBoardingPage(
       image: StaticAssets.drawer3d,
@@ -84,7 +90,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     if (args != null && (args as Map)['route'] == 'drawer') {
                       Navigator.pop(context);
                     } else {
-                      Navigator.pushReplacementNamed(context, AppRoutes.home);
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
                     }
                   },
                 ),
@@ -114,7 +120,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 if (args != null && (args as Map)['route'] == 'drawer') {
                   Navigator.pop(context);
                 } else {
-                  Navigator.pushReplacementNamed(context, AppRoutes.home);
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginPage()));
                 }
               } else {
                 _pageController.nextPage(

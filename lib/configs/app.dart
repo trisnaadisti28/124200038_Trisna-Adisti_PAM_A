@@ -9,7 +9,6 @@ import 'app_dimensions.dart';
 
 class App {
   static bool? isLtr;
-  static bool showAds = false;
 
   static init(BuildContext context) {
     UI.init(context);
